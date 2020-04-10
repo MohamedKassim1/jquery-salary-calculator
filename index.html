@@ -1,11 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salary Calculator</title>
+    <script src="vendors/jquery-3.4.1.min.js"></script>
+    <script src="scripts/client.js"></script>
+    <link rel="stylesheet" href="vendors/bootstrap.css">
+    <link rel="stylesheet" href="styles/stylesheet.css">
 </head>
+
 <body>
-    <h1>Salary Calculator</h1>
+    <header>
+        <h1>Salary Calculator</h1>
+    </header>
+    <div class="inputDiv">
+        <h2>Add Employee</h2>
+        <input type="text" placeholder="First Name" class="firstNameInput">
+        <input type="text" placeholder="Last Name" class="lastNameInput">
+        <input type="number" placeholder="ID" class="IdInput">
+        <input type="text" placeholder="Title" class="titleInput">
+        <input type="number" placeholder="Annual Salary" class="salaryInput">
+        <input type="submit" placeholder="Submit" class="submitBtn">
+
+    </div>
+    <div class="formDiv">
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="rowData">
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>1234</td>
+                    <td>Engineer</td>
+                    <td>75000</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
+
 </html>
