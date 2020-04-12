@@ -1,7 +1,44 @@
+body{
+    background-color: #bbe1fa;
+}
 .monthlyH3{
-    text-align: right;
+    margin-left:15%; 
+    margin-right:15%;
 }
 
 .monthlyDisplayWarning{
     background-color: red;
+}
+
+.table {
+
+
+    width:68%; 
+    margin-left:15%; 
+    margin-right:15%;
+    background-color: #e1f2fb;
+  
+}
+
+.inputDiv{
+    width:70%; 
+    margin-left:15%; 
+    margin-right:15%;
+    margin-bottom: 30px;
+}
+/* .submitClass{
+    margin-left: 15px;
+    display: inline-block;
+} */
+
+.withinHeader{
+    text-align: center;
+    color: white;
+}
+.jumbotron{
+    background-color: #3282b8;
+  
+}
+input{
+    margin: 2px;
 }

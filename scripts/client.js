@@ -5,7 +5,7 @@ function onReady() {
     $('.submitBtn').on('click', addToList)
     $('.submitBtn').on('click', displayToDom)
     $('tbody').on('click', '.deleteBtn', deleteItem)
-    $('.submitBtn').on('click', monthlyExpense);
+     $('.submitBtn').on('click', monthlyExpense);
 }
 
 function addToList() {
@@ -17,6 +17,7 @@ function addToList() {
         Salary: $('.salaryInput').val()
     }
     employee.push(itemEmpArray)
+   
 
     
 }
@@ -24,12 +25,15 @@ function addToList() {
 function monthlyExpense(){
     let totalCost = 0;
     let el = $('.monthlyDisplay');
+    el.empty();
     for(let i = 0; i < employee.length; i++) {
         totalCost += Math.round(employee[i].Salary) /12;
-        el.empty();
-        el.append(totalCost);
+        el.text(Math.round(totalCost));
+        //console.log(totalCost)
         if(totalCost > 20000) {
             $('.monthlyDisplay').addClass('monthlyDisplayWarning')
+        }else{
+            $('.monthlyDisplay').removeClass('monthlyDisplayWarning')
         }
      }
      
@@ -58,7 +62,6 @@ function displayToDom() {
          $('.salaryInput').val('')
         
     }//end of loop
-    //monthlyExpense();
 }
 
 function deleteItem() {
@@ -66,7 +69,8 @@ function deleteItem() {
         let item = $(this).closest('tr');
         employee.splice(item.index(), 1);
         item.remove();
-    
-        console.log(employee)
+         //addToList();
         monthlyExpense();
+        displayToDom();
+        //console.log(employee);
 }
